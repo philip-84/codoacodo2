@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+	<body>
+
+	<h2>Ingreso al sistema</h2>
+
+	<form name="ingreso" action="#" onsubmit="return validar()" method="get">
+		<label for="user">Usuario: </label>
+		<input id="user" type="text">
+		<br>
+		<br>
+		<label for="user">Clave: </label>
+		<input id="pass" type="password">
+		<br>
+		<input type="submit" value="Ingresar">
+	</form>
+
+	<script>
+	function validar() {
+
+	  if (document.getElementById("user").value == "" ||
+		  document.getElementById("pass").value == "" ) {
+		
+		alert("Los campos no pueden estar vacíos");
+		
+		return false;
+		}
+	  else {
+		if( !document.getElementById("user").value.includes("@")) {
+	    
+		alert("Usuario debe contener arroba @");
+		
+		return false;
+		}
+	  }
+	}
+	</script>
+
+	</body>
+</html>
+
